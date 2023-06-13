@@ -1,0 +1,6 @@
+{
+  "name": "Twitch Playlist Server",
+  "description": "Server for twitch playlists",
+  "repository": "https://github.com/egorvas/twitch-playlist-server",
+  "keywords": ["node", "express", "twitch", "m3u"]
+}
