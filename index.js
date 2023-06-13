@@ -1,9 +1,9 @@
 const twitch = require("twitch-m3u8");
 const m3u = require('m3u');
 const express = require("express");
-const CHANNELS = process.env.CHANNELS || ["dotatv247"];
+const CHANNELS = process.env.CHANNELS.split(",") || ["dotatv247"];
 
-if (Array.isArray(CHANNELS)&&CHANNELS.length>0){
+if (CHANNELS.length>0){
     const app = express();
     app.set('port', (process.env.PORT || 5000));
     app.get('/', async (req, res) => {
