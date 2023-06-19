@@ -35,6 +35,7 @@ if (CHANNELS.length>0){
     const app = express();
     app.set('port', (process.env.PORT || 5000));
     app.get('/', async (req, res) => {
+        res.set({"Content-Disposition":"attachment; filename=\"twitch.m3u8\""});
         res.send(response);
     })
 
